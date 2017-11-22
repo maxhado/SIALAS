@@ -26,6 +26,7 @@ class CreateHorasLaboradas extends Migration
         });
     }
 
+    //Soluciones
     /**
      * Reverse the migrations.
      *
