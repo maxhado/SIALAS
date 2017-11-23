@@ -9,21 +9,15 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    protected $table ="users";
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','username','tipo','password','email','id_personal'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function personal(){
+        return $this->hasOne('App\personal');
+    }
+
+
 }

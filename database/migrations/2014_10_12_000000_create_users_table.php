@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('tipo',255);
             $table->string('email',255);         
             $table->integer('id_personal')->unsigned();
-
+            $table->string('password',255);
             $table->rememberToken();
             $table->timestamps();
             $table->foreign('id_personal')->references('id')->on('personales')->onDelete('cascade');

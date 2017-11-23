@@ -19,7 +19,9 @@ class CreateAdministrativos extends Migration
             $table->time('horas_extras',255);
             $table->string('cargo',255);
             $table->integer('id_personal')->unsigned();
+            $table->integer('id_sucursal')->unsigned();
             $table->foreign('id_personal')->references('id')->on('personales')->onDelete('cascade');
+            $table->foreign('id_sucursal')->references('id')->on('sucursales')->onDelete('cascade');
             $table->timestamps();
         });
     }
